@@ -12,8 +12,37 @@
         Height="768"
         Width="1250"
         ResizeMode="NoResize"
-        Title="Chat App">
+        Title="Chat App"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <!--Structuring MainWindow-->
+    <Border CornerRadius="20"
+            Background="WhiteSmoke">
     <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        <!--Title Bar-->
+            <Border
+                Background="#49a078"
+                CornerRadius="20,20,0,0"
+                Grid.ColumnSpan="3"
+                Height="30"
+                MouseDown="Border_MouseDown">
+                <Grid>
+                    <TextBlock
+                        Text="{Binding Title, 
+                        ElementName=mainWindow}" />
+                </Grid>
+            </Border>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>
