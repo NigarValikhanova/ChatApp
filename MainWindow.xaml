@@ -18,7 +18,7 @@
     <!--Structuring MainWindow-->
     <Border CornerRadius="20"
             Background="WhiteSmoke">
-    <Grid>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
@@ -29,17 +29,34 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-        <!--Title Bar-->
+
+
+            <!--Title Bar-->
             <Border
                 Background="#49a078"
                 CornerRadius="20,20,0,0"
-                Grid.ColumnSpan="3"
-                Height="30"
+                Grid.ColumnSpan="4"
+                Height="40"
                 MouseDown="Border_MouseDown">
                 <Grid>
                     <TextBlock
                         Text="{Binding Title, 
-                        ElementName=mainWindow}" />
+                        ElementName=mainWindow}"
+                        Margin="15,0,514,0"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        FontSize="22"
+                        FontWeight="Bold"
+                        />
+                    
+                    <!--Window Button-->
+                    <StackPanel
+                        HorizontalAlignment="Right"
+                        Margin="10,0"
+                        Orientation="Horizontal">
+                        
+                    </StackPanel>
+                    
                 </Grid>
             </Border>
 
