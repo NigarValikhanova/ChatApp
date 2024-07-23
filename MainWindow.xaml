@@ -35,8 +35,7 @@
             <Border
                 Background="#49a078"
                 CornerRadius="20,20,0,0"
-                Grid.ColumnSpan="4"
-                Height="40"
+                Grid.ColumnSpan="4"                
                 MouseDown="Border_MouseDown">
                 <Grid>
                     <TextBlock
@@ -54,7 +53,19 @@
                         HorizontalAlignment="Right"
                         Margin="10,0"
                         Orientation="Horizontal">
-                        
+                        <Button x:Name="btnMinimize"
+                                Content="{StaticResource minimize}"
+                                Click="btnMinimize_Click"
+                                Style="{StaticResource IconButtonStyle}"/>
+                        <Button x:Name="btnMaximize"
+                                Content="{StaticResource maximize}"
+                                Click="btnMaximize_Click"                                
+                                Style="{StaticResource IconButtonStyle}"/>
+                        <Button x:Name="btnClose"
+                                Content="{StaticResource close}"
+                                Foreground="Red"
+                                Click="btnClose_Click"
+                                Style="{StaticResource IconButtonStyle}"/>
                     </StackPanel>
                     
                 </Grid>

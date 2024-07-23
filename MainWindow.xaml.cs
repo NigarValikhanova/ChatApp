@@ -26,5 +26,26 @@ namespace ChatApp
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
         }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            //To Minimize the window
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            //To Maximize the window when the window is normal and vice versa
+            if (WindowState == WindowState.Normal)
+                WindowState = WindowState.Maximized;
+            else
+                WindowState = WindowState.Normal;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            //To Close the application
+            Application.Current.Shutdown();
+        }
     }
 }
