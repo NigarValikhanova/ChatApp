@@ -16,7 +16,7 @@
         
         & A textblock for Contact Name-->
         
-        <DataTemplate x:Key="thumbsTemplate">
+        <DataTemplate x:Key="thumbsTemplate" DataType="Button">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition MinHeight="55"/>
@@ -24,7 +24,8 @@
                     <RowDefinition MinHeight="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Ellipse
+                <Grid>
+                    <Ellipse
                     Name="outerEllipse"
                     Width="55"
                     Height="55"
@@ -41,10 +42,6 @@
                     Width="50"
                     Height="50"
                     Stretch="Uniform"                    
-                    StrokeThickness="1"
-                    Stroke="#49a078"
-                    StrokeDashArray="5"
-                    StrokeDashCap="Round"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
@@ -52,16 +49,33 @@
                 </Ellipse>
 
                 <Path
-                    Data="{StaticResource addSign}"/>
+                    Data="{StaticResource addSign}"
+                    Fill="#dce1de"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    />
+                </Grid>
+                <!--Contact Profile Ellipse-->
+                <Ellipse
+                    Name="contactPhotoEllipse"
+                    Width="26"
+                    Height="26"
+                    Stretch="Uniform"                    
+                    StrokeThickness="2"
+                    Stroke="#dce1de"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right" />
 
             </Grid>
         </DataTemplate>
     </UserControl.Resources>
-    <ItemsControl>
+    <ItemsControl ItemTemplate="{StaticResource 
+        thumbsTemplate}">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                 <StackPanel Orientation="Horizontal"/>
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
+        <Ellipse/>
     </ItemsControl>
 </UserControl>
