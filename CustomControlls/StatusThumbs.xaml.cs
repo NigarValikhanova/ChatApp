@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ChatApp.CustomControlls
 {
     /// <summary>
-    /// Interaction logic for StatusTumbs.xaml
+    /// Interaction logic for StatusThumbs.xaml
     /// </summary>
-    public partial class StatusTumbs : UserControl
+    public partial class StatusThumbs : UserControl
     {
-        public StatusTumbs()
+        public StatusThumbs()
         {
             InitializeComponent();
         }
