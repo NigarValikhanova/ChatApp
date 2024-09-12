@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ChatApp.CustomControlls
+namespace ChatApp.CustomControls
 {
     /// <summary>
     /// Interaction logic for StatusThumbs.xaml
